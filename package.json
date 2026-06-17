@@ -1,0 +1,28 @@
+{
+  "name": "nft-marketplace",
+  "version": "1.0.0",
+  "description": "final exam",
+  "homepage": "https://github.com/Aryanpml/NFT-Marketplace#readme",
+  "bugs": {
+    "url": "https://github.com/Aryanpml/NFT-Marketplace/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aryanpml/NFT-Marketplace.git"
+  },
+  "license": "ISC",
+  "author": "aryan",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start:tw": "npx @tailwindcss/cli -i ./css/main.css -o ./css/style.css --watch",
+    "start:tw2": "npx @tailwindcss/cli -i ./css/main2.css -o ./css/style2.css --watch",
+    "start:api-user": "npx json-server --watch data/user.json --port 3001"
+  },
+  "dependencies": {
+    "tailwind": "^4.0.0"
+  }
+}
