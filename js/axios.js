@@ -67,7 +67,7 @@ window.addEventListener("scroll", () => {
 const API_URL =
   "https://raw.githubusercontent.com/mmhosseinzadeh9190/mft-final/refs/heads/main/assets/data/data.json";
 
-// collectiom fetch
+// collection fetch
 const renderCollectionCard = (collection, creator, index) => {
   let visibilityClasses = "";
 

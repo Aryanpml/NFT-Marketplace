@@ -36,7 +36,7 @@ $(function () {
       element.css({
         "border-color": "#800",
         "box-shadow": "0 0 0 5px rgba(136, 0, 0, 0.3)",
-        "border-radius": "20px",
+        "border-radius": "12px",
       });
     }
   }
