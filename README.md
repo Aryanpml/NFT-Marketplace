@@ -1,12 +1,22 @@
 # 🎓 Web Design — Final Project
 
-This is my **end-of-term project** for the Web Design course, completed under the supervision of Professor **Mohammad Mahdi Hosseinzadeh**.
+This is my **end-of-term project** for the Web Design course, completed under the supervision of **Mohammad Mahdi Hosseinzadeh**.
+
+🔗 **Live Demo:** [nft-marketplace-8yuf.vercel.app](https://nft-marketplace-8yuf.vercel.app/)
 
 ---
 
 ## About
 
 This project serves as the final assessment of the Web Design course, showcasing the skills acquired throughout the semester — including UI design, web page structuring, and delivering a proper user experience.
+
+---
+
+## Preview
+
+[![NFT Marketplace Preview](preview.png)](https://nft-marketplace-8yuf.vercel.app/)
+
+> Click the image to visit the live site.
 
 ---
 
