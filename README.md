@@ -25,4 +25,4 @@ open index.html
 
 ---
 
-Made with ❤️ for NFT Design class
+Made with ❤️ for MFT Design class
