@@ -45,7 +45,7 @@ links.forEach((link) => {
   });
 });
 
-// hamberger header
+// hamburger header
 const menuBtn = document.getElementById("menu-btn");
 const navbar = document.getElementById("navbar");
 
@@ -53,17 +53,20 @@ menuBtn.addEventListener("click", () => {
   navbar.classList.toggle("hidden");
 });
 
-// header scroll
+// glass morphism
 const header = document.querySelector("header");
 
 window.addEventListener("scroll", () => {
   if (window.scrollY > 400) {
     header.classList.add("bg-white/10", "backdrop-blur-md", "shadow-lg");
+    navbar.classList.add("bg-sed", "backdrop-blur-md", "shadow-lg");
   } else {
     header.classList.remove("bg-white/10", "backdrop-blur-md", "shadow-lg");
+    navbar.classList.remove("bg-sed", "backdrop-blur-md", "shadow-lg");
   }
 });
 
+// fetch data from json file
 const API_URL =
   "https://raw.githubusercontent.com/mmhosseinzadeh9190/mft-final/refs/heads/main/assets/data/data.json";
 
@@ -77,10 +80,11 @@ const renderCollectionCard = (collection, creator, index) => {
     visibilityClasses = "hidden xl:grid";
   }
 
+  // html code section collection
   return `
     <section id="collection-${collection.id}" class="grid h-max gap-4 ${visibilityClasses}">
      
-    <div class="overflow-hidden rounded-20">
+      <div class="overflow-hidden rounded-20">
         <img
           src="${collection.images[0]}"
           alt="${collection.name} main image"
@@ -90,9 +94,9 @@ const renderCollectionCard = (collection, creator, index) => {
 
       <div class="grid grid-cols-3 gap-4">
       
-             <div class="overflow-hidden rounded-xl">
+        <div class="overflow-hidden rounded-xl">
                 <img src="${collection.images[1]}" alt="${collection.name} image 2" class="w-full object-cover" />
-              </div>
+        </div>
 
 
         <div class="overflow-hidden rounded-xl">
@@ -107,19 +111,19 @@ const renderCollectionCard = (collection, creator, index) => {
 
       <div class="flex h-max flex-col gap-3">
 
-            <div>
+        <div>
                 <h5 class="text-2xl font-semibold text-white">${collection.name}</h5>
-            </div>
+        </div>
 
         <div class="flex gap-3 items-center">
           <div>
             <img src="${creator.image}" alt="${creator.name} avatar" class="h-6 w-6 rounded-full object-cover" />
           </div>
 
-         <div>
+          <div>
             <span class="text-base text-white">${creator.name}</span>
-          </div>
         </div>
+      </div>
 
       </div>
     </section>
@@ -143,14 +147,13 @@ const fetchAndRenderCollections = async () => {
       );
     });
   } catch (error) {
-    console.warn("Error fetching data:", error);
+    console.error("Error fetching data:", error);
   }
 };
 
 fetchAndRenderCollections();
 
 // creator fetch
-
 const renderCreatorCard = (creator, index) => {
   let responsiveClass = "";
 
@@ -162,6 +165,7 @@ const renderCreatorCard = (creator, index) => {
     responsiveClass = "hidden xl:flex";
   }
 
+  // html code section creator
   return `
     <div class="bg-background-secondary relative w-[315px] gap-5  md:w-[330px] h-[100px] xl:h-60 xl:w-60 rounded-20 flex flex-row xl:flex-col ${responsiveClass}">
       <div class="py-5 xl:py-0 pl-5 xl:px-15 xl:pt-5">
@@ -199,13 +203,13 @@ const fetchAndRenderCreators = async () => {
       );
     });
   } catch (error) {
-    console.warn("Error fetching creators:", error);
+    console.error("Error fetching creators:", error);
   }
 };
 
 fetchAndRenderCreators();
 
-// fetch categories
+// fetch html section categories
 
 const renderCategoryCard = (category) => {
   return `
@@ -256,7 +260,6 @@ const fetchAndRenderCategories = async () => {
 fetchAndRenderCategories();
 
 // fetch nfts
-
 const renderNFTCard = (nft, creator, index) => {
   let visibilityClasses = "";
 
@@ -264,6 +267,7 @@ const renderNFTCard = (nft, creator, index) => {
     visibilityClasses = "md:hidden xl:block";
   }
 
+  // html section nfts
   return `
     <section class="max-w-82.5  ${visibilityClasses}">
       
@@ -346,6 +350,7 @@ const fetchAndRenderNFTs = async () => {
 
 fetchAndRenderNFTs();
 
+// timer
 const hourEl = document.getElementById("hour");
 const minuteEl = document.getElementById("minute");
 const secondEl = document.getElementById("second");
